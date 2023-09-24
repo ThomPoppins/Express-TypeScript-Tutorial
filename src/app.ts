@@ -17,6 +17,9 @@ app
   })
   .delete((req: Request, res: Response) => {
     return res.send("You made a DELETE request");
+  })
+  .all((req: Request, res: Response) => {
+    return res.send("You made a request");
   });
 
 app.listen(5555, () => console.log("Application listening on port 5555"));
