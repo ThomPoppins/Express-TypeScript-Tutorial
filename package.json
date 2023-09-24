@@ -1,0 +1,23 @@
+{
+  "name": "express-typescript-tutorial",
+  "version": "1.0.0",
+  "description": "Express.js TypeScript Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThomPoppins/Express-TypeScript-Tutorial.git"
+  },
+  "keywords": [
+    "express.js",
+    "typescript"
+  ],
+  "author": "Thom Veldpaus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThomPoppins/Express-TypeScript-Tutorial/issues"
+  },
+  "homepage": "https://github.com/ThomPoppins/Express-TypeScript-Tutorial#readme"
+}
