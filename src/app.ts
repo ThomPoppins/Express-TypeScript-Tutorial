@@ -1,13 +1,29 @@
-import express, { Request, Response } from "express";
+import express, { NextFunction, Request, Response } from "express";
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/api/books/:bookId", (req: Request, res: Response) => {
+function handleGetBookOne(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): any {
   console.log(req.params);
-  const bookId = req.params.bookId;
-  res.send(`Book with id ${bookId}`);
-});
+
+  next();
+}
+
+function handleGetBookTwo(
+  req: Request,
+  res: Response,
+  next: NextFunction
+): any {
+  console.log("second handler");
+
+  res.send(req.params);
+}
+
+app.get("/api/books/:bookId/:authorId", [handleGetBookOne, handleGetBookTwo]);
 
 app.listen(5555, () => console.log("Application listening on port 5555"));
